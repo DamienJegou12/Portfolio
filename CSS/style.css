@@ -1,3 +1,42 @@
-nav{
-    background-color: green;
+
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #4C9A7C;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;       /* supprime les puces */
+    margin: 0;
+    padding: 0;
+    display: flex;          /* aligne horizontalement */
+    gap: 20px;              /* espace entre les éléments */
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #CCCCCC;
+}
+
+.titre{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
 }

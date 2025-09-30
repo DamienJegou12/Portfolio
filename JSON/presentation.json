@@ -1,0 +1,22 @@
+{
+    "cells": [
+        {
+            "titre": "Parcours scolaire",
+            "contenu": "Je suis allé au lycée Blaise Pascal à Orsay où j'ai pu obtenir mon baccalauréat maths physique chimie mention assez bien.\nActuellement, j'étudie à l'IUT d'Orsay afin d'obtenir un Brevet Universitaire et Technologique en informatique.",
+            "type": "texte",
+            "id": 2
+        },
+        {
+            "id": 1,
+            "type": "image",
+            "titre": "Logo IUT Orsay",
+            "contenu": "IUT.jpg"
+        },
+        {
+            "id": 3,
+            "type": "texte",
+            "titre": "Compétences",
+            "contenu": "Damien Jegou, 20 ans, 3e année de BUT Informatique"
+        }
+    ]
+}
