@@ -71,3 +71,74 @@ buttons.forEach(btn => {
     }
   });
 });
+
+const skillsContainer = document.getElementById("skills-container");
+let skills = [];
+
+// Affichage des compétences
+function displaySkills(list) {
+  skillsContainer.innerHTML = "";
+  list.forEach(skill => {
+    const card = document.createElement("div");
+    card.classList.add("skill-card");
+    card.setAttribute("data-category", skill.category);
+
+    card.innerHTML = `
+      <img src="${skill.img}" alt="${skill.name}">
+      <h4>${skill.name}</h4>
+    `;
+    skillsContainer.appendChild(card);
+  });
+  revealSkills();
+}
+
+// Animation au scroll pour skills
+function revealSkills() {
+  const cards = document.querySelectorAll('.skill-card');
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      card.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealSkills);
+
+// Charger les compétences depuis JSON
+fetch("JSON/skills.json")
+  .then(res => res.json())
+  .then(data => {
+    skills = data;
+    displaySkills(skills);
+  })
+  .catch(err => console.error("Erreur de chargement skills.json :", err));
+
+// Filtrage des compétences
+const skillButtons = document.querySelectorAll('.filter-skills button');
+skillButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const category = btn.dataset.category;
+    if (category === 'all') {
+      displaySkills(skills);
+    } else {
+      const filtered = skills.filter(s => s.category === category);
+      displaySkills(filtered);
+    }
+  });
+});
+
+// === FILTRAGE DES COMPÉTENCES ===
+/*const skillButtons = document.querySelectorAll('.filter-skills button');
+
+skillButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const category = btn.dataset.category;
+    if (category === 'all') {
+      displaySkills(skills);
+    } else {
+      const filtered = skills.filter(s => s.category === category);
+      displaySkills(filtered);
+    }
+  });
+});*/

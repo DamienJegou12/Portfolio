@@ -1,0 +1,22 @@
+[
+  {
+    "name": "JavaScript",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "PHP",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "Git",
+    "category": "TOOL",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "SCRUM",
+    "category": "METHOD",
+    "img": "https://via.placeholder.com/80x80"
+  }
+]
