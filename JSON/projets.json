@@ -18,8 +18,8 @@
     "img": "https://via.placeholder.com/400x200"
   },
   {
-    "title": "Application Web",
-    "description": "Application fictive front-end.",
+    "title": "Application JAVA",
+    "description": "Application JAVA pour gérer un évenement sportif, sur le thème des Jeux Olympiques de Paris. L'application permet d'enregistrer des athlètes, des équipes et des épreuves, de plus on peut voir les épreuves enregistrées.",
     "category": "JS",
     "img": "https://via.placeholder.com/400x200"
   }
