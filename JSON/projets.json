@@ -22,5 +22,27 @@
     "description": "Application JAVA pour gérer un évenement sportif, sur le thème des Jeux Olympiques de Paris. L'application permet d'enregistrer des athlètes, des équipes et des épreuves, de plus on peut voir les épreuves enregistrées.",
     "category": "JAVA",
     "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "Application C++",
+    "description": "Application C++ pour appliquer des filtres sur des images. L'application permet d'ouvrir une image, d'appliquer un filtre (noir et blanc, niveau de gris, isoler une couleur) et d'enregistrer l'image modifiée.",
+    "category": "C++",
+    "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "Exploitation de base de données",
+    "description": "Création de fonctions, triggers et vues en en PL/SQL sur sqldeveloper. Avec un jeu de données sur les résultats de tous les Jeux Olympiques enregistrés avant les JO de Paris.",
+    "category": "BD",
+    "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "KeepTheMood",
+    "description": "Création d'un jeu 2D en C# avec Unity. Le jeu a été fait en équipre de 6 personnes lors de la Code Game Jam 2025, qui est une compétition de création de jeu vidéo en 30 heures et qui était organisée par l'IUT de Montpellier Sète. Le jeu est un asteroïde-like où on contrôle un instrument qui permet de détruire des véhicules produisant du bruit, le but est de survivre le plus longtemps possible.",
+    "category": "JV",
+    "img": "https://via.placeholder.com/400x200",
+    "links": {
+      "Code Game Jam": "https://codegamejam.extragames.fr/",
+      "KeepTheMood": "https://lucaslp12.itch.io/keepthemood"
+    }
   }
 ]
