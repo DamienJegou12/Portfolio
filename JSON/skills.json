@@ -10,6 +10,56 @@
     "img": "https://via.placeholder.com/80x80"
   },
   {
+    "name": "HTML",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "CSS",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "C++",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "C#",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "Python",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "Java",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "GDScript",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "PL/SQL",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "MySQL",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
+    "name": "SQL",
+    "category": "DEV",
+    "img": "https://via.placeholder.com/80x80"
+  },
+  {
     "name": "Git",
     "category": "TOOL",
     "img": "https://via.placeholder.com/80x80"
