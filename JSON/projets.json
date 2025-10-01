@@ -37,12 +37,30 @@
   },
   {
     "title": "KeepTheMood",
-    "description": "Création d'un jeu 2D en C# avec Unity. Le jeu a été fait en équipre de 6 personnes lors de la Code Game Jam 2025, qui est une compétition de création de jeu vidéo en 30 heures et qui était organisée par l'IUT de Montpellier Sète. Le jeu est un asteroïde-like où on contrôle un instrument qui permet de détruire des véhicules produisant du bruit, le but est de survivre le plus longtemps possible.",
+    "description": "Création d'un jeu 2D en C# avec Unity. Le jeu a été fait en équipe de 6 personnes lors de la Code Game Jam 2025, qui est une compétition de création de jeu vidéo en 30 heures et qui était organisée par l'IUT de Montpellier Sète. Le jeu est un asteroïde-like où on contrôle un instrument qui permet de détruire des véhicules produisant du bruit, le but est de survivre le plus longtemps possible.",
     "category": "JV",
     "img": "https://via.placeholder.com/400x200",
     "links": {
       "Code Game Jam": "https://codegamejam.extragames.fr/",
       "KeepTheMood": "https://lucaslp12.itch.io/keepthemood"
     }
+  },
+  {
+    "title": "Création de base de données",
+    "description": "Rencontre avec une association pour créer une base de données fictive répondant à ses besoins. Création du Modèle Conceptuel des Données, du Schéma Relationnel et de la base de données en SQLite sur DB Browser.",
+    "category": "BD",
+    "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "MathRun",
+    "description": "Création d'un jeu 2D en GDScript avec Godot. Le jeu a été fait en équipe de 3. C'est un jeu de plateforme où le joueur doit répondre à des questions mathématiques pour avancer. L'objectif est de créer un jeu permettant d'apprendre des mathématiques tout en s'amusant",
+    "category": "JV",
+    "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "Jeu Rogue-lite",
+    "description": "Création d'un jeu 2D en C# avec Unity. Le jeu a été fait en équipe de 12, avec la méthode agile SCRUM, et l'outil Jira. C'est un jeu de plateforme où le joueur doit survivre le plus longtemps possible en combattant des ennemis et en améliorant son personnage. Le jeu est un Rogue-lite, c'est-à-dire que le joueur perd tout son équipement à chaque mort, mais conserve son niveau.",
+    "category": "JV",
+    "img": "https://via.placeholder.com/400x200"
   }
 ]
