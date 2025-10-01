@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Damien JEGOU</h1>
+  <p>Développeur - Étudiant en 3e année en BUT informatique</p>
+</header>
+
+<section>
+  <h2>Mes Projets</h2>
+
+  <div class="filter-btns">
+    <button data-category="all">Tous</button>
+    <button data-category="WEB">Web</button>
+    <button data-category="JAVA">JS</button>
+    <button data-category="C++">HTML/CSS</button>
+    <button data-category="JV">Jeux Vidéos</button>
+    <button data-category="RESEAUX">Réseaux</button>
+  </div>
+
+  <div class="grid" id="projects-container">
+    <!-- Les projets seront générés ici avec JS -->
+  </div>
+</section>
+
+<section>
+    <h2>Mes Stages</h2>
+    <div class="filter-btns">
+        <button data-category="all">Tous</button>
+        <button data-category="2025">2025</button>
+    </div>
+    <div class="grid" id="internships-container">
+        <!-- Les stages seront générés ici avec JS -->
+    </div>
+</section>
+
+<script src="JavaScript/script.js"></script>
+</body>
+</html>

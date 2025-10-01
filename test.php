@@ -51,8 +51,8 @@ $projects = [
 <body>
 
 <header>
-  <h1>Mon Nom</h1>
-  <p>Développeur Web - Étudiant en informatique</p>
+  <h1>Damien JEGOU</h1>
+  <p>Développeur - Étudiant en 3e année en BUT informatique</p>
 </header>
 
 <section>

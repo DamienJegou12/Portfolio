@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Plateforme de Démocratie Participative",
+    "description": "Création d'un site web pour de la démocratie participative permettant d'avoir un compte, de créer des groupe, des propositions dans des groupes et de les voter. Le site est fait en PHP, css et javascript. De plus le site utilise une API REST pour se connecter à la base de donnée phpMyAdmin en MySQL.",
+    "category": "WEB",
+    "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "Jeu en JavaScript",
+    "description": "Un petit jeu interactif.",
+    "category": "JS",
+    "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "Site HTML/CSS",
+    "description": "Un site vitrine pour une école fictive. Le site est fait en HTML et CSS.",
+    "category": "WEB",
+    "img": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "Application Web",
+    "description": "Application fictive front-end.",
+    "category": "JS",
+    "img": "https://via.placeholder.com/400x200"
+  }
+]
