@@ -1,0 +1,11 @@
+[
+  {
+    "company": "LOCEAN",
+    "subject": "Migration du site EGO Network vers WordPress",
+    "startDate": "2025-04-14",
+    "endDate": "2025-07-04",
+    "technologies": ["PHP", "Laravel", "WordPress", "JavaScript", "HTML", "CSS", "MySQL", "Blade", "fuse.js"],
+    "text": "Migration du site EGO Network vers WordPress. Redéveloppement de fonctionnalités spécifiques avec une API Laravel. Développement de formulaires à partir de fichier JSON grâce à blade, de datalist avec fuse.js",
+    "year": "2025"
+  }
+]

@@ -128,17 +128,70 @@ skillButtons.forEach(btn => {
   });
 });
 
-// === FILTRAGE DES COMPÉTENCES ===
-/*const skillButtons = document.querySelectorAll('.filter-skills button');
+const internshipsContainer = document.getElementById("internships-container");
+let internships = [];
 
-skillButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const category = btn.dataset.category;
-    if (category === 'all') {
-      displaySkills(skills);
-    } else {
-      const filtered = skills.filter(s => s.category === category);
-      displaySkills(filtered);
+// Affichage des stages
+function displayInternships(list) {
+  internshipsContainer.innerHTML = "";
+  list.forEach(stage => {
+    const card = document.createElement("div");
+    card.classList.add("internship-card");
+    card.setAttribute("data-year", stage.year);
+
+    // Générer liste technologies
+    let techList = "";
+    if (stage.technologies) {
+      techList = stage.technologies.map(t => `<span class="tech">${t}</span>`).join(" ");
+    }
+
+    card.innerHTML = `
+      <h3>${stage.company}</h3>
+      <h4>${stage.subject}</h4>
+      <p><strong>Période :</strong> ${stage.startDate} → ${stage.endDate}</p>
+      <p><strong>Technologies :</strong> ${techList}</p>
+      <p>${stage.text}</p>
+    `;
+
+    internshipsContainer.appendChild(card);
+  });
+  revealInternships();
+}
+
+// Animation au scroll
+function revealInternships() {
+  const cards = document.querySelectorAll('.internship-card');
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      card.classList.add('show');
     }
   });
-});*/
+}
+
+window.addEventListener('scroll', revealInternships);
+
+// Charger les stages depuis JSON
+fetch("JSON/stages.json")
+  .then(res => res.json())
+  .then(data => {
+    internships = data;
+    displayInternships(internships);
+  })
+  .catch(err => console.error("Erreur de chargement internships.json :", err));
+
+// Filtrage par année
+const internshipButtons = document.querySelectorAll('.filter-internships button');
+
+internshipButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const year = btn.dataset.year;
+    if (year === 'all') {
+      displayInternships(internships);
+    } else {
+      const filtered = internships.filter(i => i.year === year);
+      displayInternships(filtered);
+    }
+  });
+});
+
