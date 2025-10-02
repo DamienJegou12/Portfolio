@@ -2,71 +2,136 @@
   {
     "name": "JavaScript",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/JS.png"
   },
   {
     "name": "PHP",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/PHP.png"
   },
   {
     "name": "HTML",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/HTML.png"
   },
   {
     "name": "CSS",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/CSS.png"
   },
   {
     "name": "C++",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/C++.png"
   },
   {
     "name": "C#",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/Logo_C_sharp.svg.png"
   },
   {
     "name": "Python",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/PYTHON.png"
   },
   {
     "name": "Java",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/JAVA.png"
   },
   {
     "name": "GDScript",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/GDSCRIPT.png"
   },
   {
     "name": "PL/SQL",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/"
   },
   {
     "name": "MySQL",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/MYSQL.png"
   },
   {
     "name": "SQL",
     "category": "DEV",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/SQL.png"
+  },
+  {
+    "name": "SPARQL",
+    "category": "DEV",
+    "img": "Documents/sparql.svg"
   },
   {
     "name": "Git",
     "category": "TOOL",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/Git_icon.png"
+  },
+  {
+    "name": "Jira",
+    "category": "TOOL",
+    "img": "Documents/JIRA.png"
+  },
+  {
+    "name": "Trello",
+    "category": "TOOL",
+    "img": "Documents/TRELLO.png"
+  },
+  {
+    "name": "Unity",
+    "category": "TOOL",
+    "img": "Documents/UNITY.png"
+  },
+  {
+    "name": "Godot",
+    "category": "TOOL",
+    "img": "Documents/GODOT.png"
+  },
+  {
+    "name": "Visual Studio Code",
+    "category": "TOOL",
+    "img": "Documents/VSCODE.png"
   },
   {
     "name": "SCRUM",
     "category": "METHOD",
-    "img": "https://via.placeholder.com/80x80"
+    "img": "Documents/SCRUM.png"
+  },
+  {
+    "name": "Modèle Conceptuel de Données",
+    "category": "CONCEPT",
+    "img": "Documents/MCD.png"
+  },
+  {
+    "name": "Schéma Relationnel",
+    "category": "CONCEPT",
+    "img": "Documents/MCD.png"
+  },
+  {
+    "name": "Diagramme de Classes",
+    "category": "CONCEPT",
+    "img": "Documents/UML.png"
+  },
+  {
+    "name": "Diagramme de Séquence",
+    "category": "CONCEPT",
+    "img": "Documents/UML.png"
+  },
+  {
+    "name": "Laravel",
+    "category": "FRAME",
+    "img": "Documents/LARAVEL.png"
+  },
+  {
+    "name": "Docker",
+    "category": "OS",
+    "img": "Documents/DOCKER.png"
+  },
+  {
+    "name": "Django",
+    "category": "FRAME",
+    "img": "Documents/DJANGO.png"
   }
 ]
