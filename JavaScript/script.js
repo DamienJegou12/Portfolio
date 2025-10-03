@@ -149,8 +149,8 @@ function displayInternships(list) {
       <h3>${stage.company}</h3>
       <h4>${stage.subject}</h4>
       <p><strong>Période :</strong> ${stage.startDate} → ${stage.endDate}</p>
-      <p><strong>Technologies :</strong> ${techList}</p>
       <p>${stage.text}</p>
+      <p><strong>Technologies :</strong> ${techList}</p>
     `;
 
     internshipsContainer.appendChild(card);
