@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Idle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Cat Idle 🐾</h1>
+
+        <div class="resources-display">
+            <p>Ronrons : <span id="compteur-ronrons">0</span></p>
+            <p>Croquettes : <span id="compteur-croquettes">0</span></p>
+            <p>Jouets : <span id="compteur-jouets">0</span></p>
+            <p class="production-rate">Production : <span id="ronrons-par-seconde">0</span> ronrons/sec</p>
+        </div>
+
+        <div class="actions">
+            <button id="bouton-clic">Faire ronronner !</button>
+            <button id="fabriquer-jouet">Fabriquer 1 Jouet (Coût: 10 Croquettes)</button>
+        </div>
+
+        <div class="upgrades">
+            <h2>Améliorations</h2>
+            <button id="acheter-croquettes">
+                Acheter 25 Croquettes (Coût: 50 Ronrons)
+            </button>
+            <button id="acheter-arbre-luxe">
+                Acheter Arbre à chat de luxe (Coût: 500 Ronrons, 200 Croquettes)
+                <span class="upgrade-bonus">Bonus: +10 ronrons/sec</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

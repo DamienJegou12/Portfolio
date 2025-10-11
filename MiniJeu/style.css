@@ -1,0 +1,106 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: #fdf6e3; /* Crème clair */
+    color: #586e75; /* Gris-bleu */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.game-container {
+    background-color: #eee8d5; /* Crème un peu plus foncé */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #cb4b16; /* Orange */
+}
+
+.resources-display p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.resources-display span {
+    color: #268bd2; /* Bleu */
+}
+
+.production-rate {
+    font-size: 1rem !important;
+    font-style: italic;
+    color: #859900; /* Vert */
+}
+
+.actions, .upgrades {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Espace entre les boutons */
+}
+
+button {
+    font-family: 'Comfortaa', cursive;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #2aa198; /* Cyan */
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Style spécifique pour les améliorations */
+.upgrades button {
+    background-color: #d33682; /* Magenta */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upgrade-bonus {
+    font-size: 0.8rem;
+    font-weight: normal;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+/* Pour les écrans plus petits (mobiles) */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .resources-display p {
+        font-size: 1rem;
+    }
+}
