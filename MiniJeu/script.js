@@ -62,8 +62,8 @@ function produireRessources() {
         inventaire.ronrons -= 55*production.croquettesParSeconde;
         inventaire.croquettes += 25*production.croquettesParSeconde;
     }
-    if(inventaire.croquettes >= 10*production.jouetsParSeconde){
-        inventaire.croquettes -= 10*production.jouetsParSeconde;
+    if(inventaire.croquettes >= 25*production.jouetsParSeconde){
+        inventaire.croquettes -= 25*production.jouetsParSeconde;
         inventaire.jouets += production.jouetsParSeconde;
     }
     if(inventaire.jouets >= 10*production.venteJouetsParSeconde){
@@ -123,7 +123,7 @@ function acheterArbreLuxe() {
  * Gère la fabrication d'un jouet.
  */
 function fabriquerJouet() {
-    let coutCroquettes = 10;
+    let coutCroquettes = 20;
 
     if (inventaire.croquettes >= coutCroquettes) {
         inventaire.croquettes -= coutCroquettes;
