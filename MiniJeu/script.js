@@ -4,7 +4,7 @@
 
 let inventaire = {
     ronrons: 0,
-    croquettes: 0, // Remis à 0 pour que l'achat soit nécessaire
+    croquettes: 0, 
     jouets: 0,
     dollars: 0
 };
