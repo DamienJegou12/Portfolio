@@ -9,29 +9,64 @@
 <body>
 
     <div class="game-container">
-        <h1>Cat Idle 🐾</h1>
+        <header>
+            <h1>Cat Idle 🐾</h1>
+        </header>
 
-        <div class="resources-display">
-            <p>Ronrons : <span id="compteur-ronrons">0</span></p>
-            <p>Croquettes : <span id="compteur-croquettes">0</span></p>
-            <p>Jouets : <span id="compteur-jouets">0</span></p>
-            <p class="production-rate">Production : <span id="ronrons-par-seconde">0</span> ronrons/sec</p>
+        <div class="section resources-display">
+            <h2><span class="icon">📊</span> Ressources</h2>
+            <div class="resource-grid">
+                <p>Ronrons : <span id="compteur-ronrons">0</span></p>
+                <p>Croquettes : <span id="compteur-croquettes">0</span></p>
+                <p>Jouets : <span id="compteur-jouets">0</span></p>
+                <p>Dollars : <span id="compteur-dollars">0 $</span></p>
+                <p>Salles : <span id="nombre-salles">1</span></p>
+            </div>
         </div>
 
-        <div class="actions">
-            <button id="bouton-clic">Faire ronronner !</button>
-            <button id="fabriquer-jouet">Fabriquer 1 Jouet (Coût: 10 Croquettes)</button>
+        <div class="section production-display">
+            <h2><span class="icon">⚙️</span> Production par seconde</h2>
+            <div class="production-grid">
+                <p><span id="ronrons-par-seconde">0</span> ronrons/sec</p>
+                <p><span id="croquettes-par-seconde">0</span> croquettes/sec</p>
+                <p><span id="jouets-par-seconde">0</span> jouets/sec</p>
+                <p><span id="vente-jouets-par-seconde">0</span> ventes/sec</p>
+            </div>
         </div>
+        
+        <div class="actions-upgrades-container">
 
-        <div class="upgrades">
-            <h2>Améliorations</h2>
-            <button id="acheter-croquettes">
-                Acheter 25 Croquettes (Coût: 50 Ronrons)
-            </button>
-            <button id="acheter-arbre-luxe">
-                Acheter Arbre à chat de luxe (Coût: 500 Ronrons, 200 Croquettes)
-                <span class="upgrade-bonus">Bonus: +10 ronrons/sec</span>
-            </button>
+            <div class="section actions">
+                <h2><span class="icon">👆</span> Actions manuelles</h2>
+                <button id="bouton-clic">Faire ronronner !</button>
+                <button id="acheter-croquettes">Acheter 25 Croquettes (50 Ronrons)</button>
+                <button id="fabriquer-jouet">Fabriquer 1 Jouet (10 Croquettes)</button>
+                <button id="vendre-jouets">Vendre 10 Jouets (Gagne 5 $)</button>
+            </div>
+
+            <div class="section upgrades">
+                <h2><span class="icon">🚀</span> Améliorations</h2>
+                <button id="acheter-salle" class="btn-building">
+                    Acheter une Salle (Coût: <span id="cout-salle">100 $</span>)
+                    <span class="upgrade-bonus">Augmente la capacité de production</span>
+                </button>
+                <button id="acheter-arbre-luxe" class="btn-upgrade-ronrons">
+                    Arbre à chat de luxe (500 R, 200 C)
+                    <span class="upgrade-bonus">Bonus: +10 ronrons/sec</span>
+                </button>
+                <button id="acheter-croquettes-auto" class="btn-upgrade-auto">
+                    Achat auto. Croquettes (200 $)
+                    <span class="upgrade-bonus">Bonus: +25 croquette/sec</span>
+                </button>
+                <button id="fabriquer-jouets-auto" class="btn-upgrade-auto">
+                    Fabrication auto. Jouets (300 $)
+                    <span class="upgrade-bonus">Bonus: +1 jouet/sec</span>
+                </button>
+                <button id="vendre-jouets-auto" class="btn-upgrade-auto">
+                    Vente auto. Jouets (500 $)
+                    <span class="upgrade-bonus">Bonus: +1 vente/sec</span>
+                </button>
+            </div>
         </div>
     </div>
 

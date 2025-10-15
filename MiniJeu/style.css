@@ -1,72 +1,127 @@
 /* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
+:root {
+    --bg-color: #fdf6e3;
+    --container-bg: #eee8d5;
+    --text-color: #586e75;
+    --header-color: #cb4b16;
+    --resource-color: #268bd2;
+    --production-color: #859900;
+    --action-btn-color: #2aa198;
+    --upgrade-ronrons-btn: #d33682;
+    --upgrade-auto-btn: #6c71c4; /* Violet */
+    --building-btn-color: #b58900; /* Or */
+}
+
 body {
     font-family: 'Comfortaa', cursive;
-    background-color: #fdf6e3; /* Crème clair */
-    color: #586e75; /* Gris-bleu */
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     padding: 1rem;
     box-sizing: border-box;
 }
 
 .game-container {
-    background-color: #eee8d5; /* Crème un peu plus foncé */
-    padding: 2rem;
+    background-color: var(--container-bg);
+    padding: 1.5rem 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     text-align: center;
 }
 
-h1 {
-    color: #cb4b16; /* Orange */
+header h1 {
+    color: var(--header-color);
+    margin-top: 0;
 }
 
-.resources-display p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+.section {
+    background-color: #fdf6e3;
+    border: 1px solid #dcd5c2;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.section h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--container-bg);
+    padding-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+/* Grilles pour les affichages */
+.resource-grid, .production-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.resource-grid p, .production-grid p {
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
     font-weight: bold;
 }
 
-.resources-display span {
-    color: #268bd2; /* Bleu */
+.resource-grid span {
+    color: var(--resource-color);
 }
 
-.production-rate {
-    font-size: 1rem !important;
+.production-grid {
     font-style: italic;
-    color: #859900; /* Vert */
+}
+
+.production-grid span {
+    font-weight: bold;
+    color: var(--production-color);
+}
+
+/* Conteneur principal pour les boutons */
+.actions-upgrades-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
 .actions, .upgrades {
-    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem; /* Espace entre les boutons */
+    gap: 0.8rem;
 }
 
+/* Styles des boutons */
 button {
     font-family: 'Comfortaa', cursive;
-    padding: 12px 20px;
+    padding: 12px 15px;
     font-size: 1rem;
     border-radius: 8px;
-    border: 2px solid transparent;
+    border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    background-color: #2aa198; /* Cyan */
     color: white;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.4;
 }
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     filter: brightness(1.1);
 }
 
@@ -75,13 +130,13 @@ button:active {
     box-shadow: none;
 }
 
-/* Style spécifique pour les améliorations */
-.upgrades button {
-    background-color: #d33682; /* Magenta */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.actions button {
+    background-color: var(--action-btn-color);
 }
+
+.upgrades .btn-upgrade-ronrons { background-color: var(--upgrade-ronrons-btn); }
+.upgrades .btn-upgrade-auto { background-color: var(--upgrade-auto-btn); }
+.upgrades .btn-building { background-color: var(--building-btn-color); }
 
 .upgrade-bonus {
     font-size: 0.8rem;
@@ -91,16 +146,20 @@ button:active {
 }
 
 /* Pour les écrans plus petits (mobiles) */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
+    .actions-upgrades-container {
+        grid-template-columns: 1fr; /* Passe à une seule colonne */
+    }
+
+    .resource-grid, .production-grid {
+        grid-template-columns: 1fr; /* Une seule colonne pour les stats */
+    }
+
     .game-container {
         padding: 1rem;
     }
 
     h1 {
-        font-size: 1.5rem;
-    }
-
-    .resources-display p {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 }
