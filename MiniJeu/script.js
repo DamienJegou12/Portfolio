@@ -4,7 +4,7 @@
 
 let inventaire = {
     ronrons: 0,
-    croquettes: 0, 
+    croquettes: 0, // Remis à 0 pour que l'achat soit nécessaire
     jouets: 0,
     dollars: 0
 };
@@ -46,7 +46,7 @@ function mettreAJourAffichage() {
     document.getElementById('compteur-jouets').textContent = inventaire.jouets;
     document.getElementById('compteur-dollars').textContent = inventaire.dollars + " $";
     document.getElementById('ronrons-par-seconde').textContent = production.ronronsParSeconde;
-    document.getElementById('croquettes-par-seconde').textContent = 25*production.croquettesParSeconde;
+    document.getElementById('croquettes-par-seconde').textContent = production.croquettesParSeconde;
     document.getElementById('jouets-par-seconde').textContent = production.jouetsParSeconde;
     document.getElementById('vente-jouets-par-seconde').textContent = production.venteJouetsParSeconde;
     document.getElementById('nombre-salles').textContent = salles.nombre;
@@ -133,7 +133,7 @@ function fabriquerJouet() {
         mettreAJourAffichage();
     } else {
         console.log("Pas assez de croquettes pour fabriquer un jouet.");
-        alert("Il vous faut au moins 10 croquettes pour fabriquer un jouet.");
+        alert("Il vous faut au moins 20 croquettes pour fabriquer un jouet.");
     }
 }
 
@@ -172,7 +172,7 @@ function vendreJouets() {
 function acheterCroquettesAuto() {
     let coutDollars = 200;
     if (production.croquettesParSeconde >= 50 * salles.nombre){
-        alert("Vous ne pouvez pas avoir une production de ronrons supérieur à " + (50 * salles.nombre) + " par seconde avec votre nombre de salles actuel. Achetez plus de salles !");
+        alert("Vous ne pouvez pas avoir une production de croquettes supérieure à " + (50 * salles.nombre) + " par seconde avec votre nombre de salles actuel. Achetez plus de salles !");
         return;
     }
     if (inventaire.dollars >= coutDollars) {
@@ -191,7 +191,7 @@ function acheterCroquettesAuto() {
 function fabriquerJouetsAuto() {
     let coutDollars = 300;
     if (production.jouetsParSeconde >= 5 * salles.nombre){
-        alert("Vous ne pouvez pas avoir une production de jouets supérieur à " + (5 * salles.nombre) + " par seconde avec votre nombre de salles actuel. Achetez plus de salles !");
+        alert("Vous ne pouvez pas avoir une production de jouets supérieure à " + (5 * salles.nombre) + " par seconde avec votre nombre de salles actuel. Achetez plus de salles !");
         return;
     }
     if (inventaire.dollars >= coutDollars) {
@@ -203,13 +203,14 @@ function fabriquerJouetsAuto() {
         alert("Pas assez de dollars pour acheter la fabrication automatique de jouets !");
     }
 }
+
 /**
  * Gère la vente automatique de jouets.
  */
 function vendreJouetsAuto() {
     let coutDollars = 500;
     if (production.venteJouetsParSeconde >= 2 * salles.nombre){
-        alert("Vous ne pouvez pas avoir une production de vente de jouets supérieur à " + (2 * salles.nombre) + " par seconde avec votre nombre de salles actuel. Achetez plus de salles !");
+        alert("Vous ne pouvez pas avoir une production de vente de jouets supérieure à " + (2 * salles.nombre) + " par seconde avec votre nombre de salles actuel. Achetez plus de salles !");
         return;
     }
     if (inventaire.dollars >= coutDollars) {
@@ -222,7 +223,46 @@ function vendreJouetsAuto() {
     }
 }
 
-// --- ÉCOUTEURS D'ÉVÉNEMENTS --- (partie à compléter dans votre fichier)
+// --- NOUVELLES FONCTIONS POUR STOPPER LES PRODUCTIONS ---
+
+/**
+ * Stoppe une unité de production de croquettes.
+ */
+function stopperCroquettesAuto() {
+    if (production.croquettesParSeconde > 0) {
+        production.croquettesParSeconde -= 1;
+        mettreAJourAffichage();
+    } else {
+        alert("La production de croquettes est déjà à 0 !");
+    }
+}
+
+/**
+ * Stoppe une unité de fabrication de jouets.
+ */
+function stopperJouetsAuto() {
+    if (production.jouetsParSeconde > 0) {
+        production.jouetsParSeconde -= 1;
+        mettreAJourAffichage();
+    } else {
+        alert("La fabrication de jouets est déjà à 0 !");
+    }
+}
+
+/**
+ * Stoppe une unité de vente de jouets.
+ */
+function stopperVenteAuto() {
+    if (production.venteJouetsParSeconde > 0) {
+        production.venteJouetsParSeconde -= 1;
+        mettreAJourAffichage();
+    } else {
+        alert("La vente de jouets est déjà à 0 !");
+    }
+}
+
+
+// --- ÉCOUTEURS D'ÉVÉNEMENTS ---
 
 // Clic sur le bouton principal pour générer des ronrons
 document.getElementById('bouton-clic').addEventListener('click', function() {
@@ -230,21 +270,22 @@ document.getElementById('bouton-clic').addEventListener('click', function() {
     mettreAJourAffichage();
 });
 
-// Clic sur le bouton d'achat de croquettes
+// Clics sur les boutons d'actions manuelles
 document.getElementById('acheter-croquettes').addEventListener('click', acheterCroquettes);
-
-// Clic sur le bouton d'achat de l'arbre
-document.getElementById('acheter-arbre-luxe').addEventListener('click', acheterArbreLuxe);
-
-// Clic sur le bouton de fabrication de jouet
 document.getElementById('fabriquer-jouet').addEventListener('click', fabriquerJouet);
-
-// NOUVEAUX ÉCOUTEURS À AJOUTER
 document.getElementById('vendre-jouets').addEventListener('click', vendreJouets);
+
+// Clics sur les boutons d'améliorations
 document.getElementById('acheter-salle').addEventListener('click', acheterSalle);
+document.getElementById('acheter-arbre-luxe').addEventListener('click', acheterArbreLuxe);
 document.getElementById('acheter-croquettes-auto').addEventListener('click', acheterCroquettesAuto);
 document.getElementById('fabriquer-jouets-auto').addEventListener('click', fabriquerJouetsAuto);
 document.getElementById('vendre-jouets-auto').addEventListener('click', vendreJouetsAuto);
+
+// Clics sur les nouveaux boutons "Stopper"
+document.getElementById('stopper-croquettes-auto').addEventListener('click', stopperCroquettesAuto);
+document.getElementById('stopper-jouets-auto').addEventListener('click', stopperJouetsAuto);
+document.getElementById('stopper-vente-auto').addEventListener('click', stopperVenteAuto);
 
 
 // --- INITIALISATION DU JEU ---

@@ -12,6 +12,7 @@
     --upgrade-ronrons-btn: #d33682;
     --upgrade-auto-btn: #6c71c4; /* Violet */
     --building-btn-color: #b58900; /* Or */
+    --stop-btn-color: #dc3545; /* Rouge */
 }
 
 body {
@@ -135,8 +136,9 @@ button:active {
 }
 
 .upgrades .btn-upgrade-ronrons { background-color: var(--upgrade-ronrons-btn); }
-.upgrades .btn-upgrade-auto { background-color: var(--upgrade-auto-btn); }
+.upgrades .btn-upgrade-auto { background-color: var(--upgrade-auto-btn); flex-grow: 1; }
 .upgrades .btn-building { background-color: var(--building-btn-color); }
+.upgrades .btn-stop { background-color: var(--stop-btn-color); }
 
 .upgrade-bonus {
     font-size: 0.8rem;
@@ -144,6 +146,21 @@ button:active {
     opacity: 0.9;
     margin-top: 4px;
 }
+
+/* Nouveau groupe de boutons pour Achat/Stop */
+.upgrade-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.upgrade-group .btn-stop {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.9rem;
+    justify-content: center;
+}
+
 
 /* Pour les écrans plus petits (mobiles) */
 @media (max-width: 700px) {
