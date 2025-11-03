@@ -46,7 +46,7 @@ function mettreAJourAffichage() {
     document.getElementById('compteur-jouets').textContent = inventaire.jouets;
     document.getElementById('compteur-dollars').textContent = inventaire.dollars + " $";
     document.getElementById('ronrons-par-seconde').textContent = production.ronronsParSeconde;
-    document.getElementById('croquettes-par-seconde').textContent = production.croquettesParSeconde;
+    document.getElementById('croquettes-par-seconde').textContent = 25*production.croquettesParSeconde;
     document.getElementById('jouets-par-seconde').textContent = production.jouetsParSeconde;
     document.getElementById('vente-jouets-par-seconde').textContent = production.venteJouetsParSeconde;
     document.getElementById('nombre-salles').textContent = salles.nombre;
