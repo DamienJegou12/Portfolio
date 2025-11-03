@@ -58,7 +58,7 @@ function mettreAJourAffichage() {
  */
 function produireRessources() {
     inventaire.ronrons += production.ronronsParSeconde;
-    if(inventaire.croquettes >= 55*production.croquettesParSeconde){
+    if(inventaire.ronrons >= 55*production.croquettesParSeconde){
         inventaire.ronrons -= 55*production.croquettesParSeconde;
         inventaire.croquettes += 25*production.croquettesParSeconde;
     }
