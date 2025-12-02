@@ -195,33 +195,3 @@ internshipButtons.forEach(btn => {
   });
 });
 
-// Gestion du formulaire de contact
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
-
-    // Simulation d'envoi
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (name && email && message) {
-      alert(`Merci ${name} ! Votre message a bien été envoyé.`);
-      contactForm.reset();
-    } else {
-      alert("Veuillez remplir tous les champs.");
-    }
-  });
-}
-
-// Exemple simplifié
-document.getElementById('contact-form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Empêche le rechargement de la page
-
-  emailjs.sendForm('service_id', 'template_id', this)
-    .then(function () {
-      alert('Message envoyé !');
-    }, function (error) {
-      alert('Erreur...');
-    });
-});
