@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Damien JEGOU</h1>
+        <p>Développeur - Étudiant en 3e année en BUT informatique</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="skills.html">Compétences</a></li>
+            <li><a href="internships.html">Stages</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact">
+        <h2>Me Contacter</h2>
+        <div class="contact-container">
+            <p>Vous avez un projet ou une opportunité à proposer ? N'hésitez pas à m'envoyer un message !</p>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Votre email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Sujet du message">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+
+            <div class="social-links">
+                <h3>Retrouvez-moi sur :</h3>
+                <a href="https://www.linkedin.com/in/damien-jegou/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/DamienJegou12" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Damien JEGOU</p>
+    </footer>
+    <script src="JavaScript/script.js"></script>
+</body>
+
+</html>
