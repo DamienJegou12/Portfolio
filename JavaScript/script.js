@@ -199,7 +199,6 @@ internshipButtons.forEach(btn => {
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
 
     // Simulation d'envoi
     const name = document.getElementById('name').value;
@@ -215,3 +214,14 @@ if (contactForm) {
   });
 }
 
+// Exemple simplifié
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Empêche le rechargement de la page
+
+  emailjs.sendForm('service_id', 'template_id', this)
+    .then(function () {
+      alert('Message envoyé !');
+    }, function (error) {
+      alert('Erreur...');
+    });
+});
