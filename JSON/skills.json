@@ -133,5 +133,10 @@
     "name": "Django",
     "category": "FRAME",
     "img": "Documents/DJANGO.png"
+  },
+  {
+    "name": "Bash",
+    "category": "DEV",
+    "img": "Documents/BASH.png"
   }
 ]
