@@ -4,8 +4,31 @@
     "subject": "Migration du site EGO Network vers WordPress",
     "startDate": "2025-04-14",
     "endDate": "2025-07-04",
-    "technologies": ["PHP", "Laravel", "WordPress", "JavaScript", "HTML", "CSS", "MySQL", "Blade", "fuse.js"],
+    "technologies": [
+      "PHP",
+      "Laravel",
+      "WordPress",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "MySQL",
+      "Blade",
+      "fuse.js"
+    ],
     "text": "Migration du site EGO Network vers WordPress. Redéveloppement de fonctionnalités spécifiques avec une API Laravel. Développement de formulaires à partir de fichier JSON grâce à blade, de datalist avec fuse.js",
     "year": "2025"
+  },
+  {
+    "company": "Direction Générale des Finances Publiques",
+    "subject": "Redéveloppement d'une application java",
+    "startDate": "2026-01-19",
+    "endDate": "2026-05-15",
+    "technologies": [
+      "Java",
+      "SSH",
+      "LibreOffice Calc"
+    ],
+    "text": "Redéveloppement d'une application java qui ne fonctionnait plus, avec l'ajout de nouvelles fonctionnalités comme le controle de conformité de certaines actions ainsi que la génération de document et de mail.",
+    "year": "2026"
   }
 ]
