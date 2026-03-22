@@ -2,52 +2,137 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>Damien JEGOU</h1>
-    <p>Développeur - Étudiant en 3e année en BUT informatique</p>
-  </header>
+    <header>
+        <h1>Damien JEGOU</h1>
+        <p>Développeur - Étudiant en 3e année en BUT informatique</p>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="skills.html">Compétences</a></li>
-      <li><a href="projects.html">Projets</a></li>
-      <li><a href="internships.html">Stages</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <section>
-    <h2>Qui suis-je ?</h2>
-    <p>Je suis Damien JEGOU, un étudiant en 3e année en BUT informatique. Au cours de mon parcours j'ai acquis des
-      compétences en développement, en méthodologie de travail et en gestion de projet, vous pouvez les retrouver sur la
-      page compétences. J'ai aussi participé à des projets divers pour mettre en pratique mes compétences, vous pouvez
-      les retrouver sur la page projets. J'ai aussi eu l'opportunité de participer à des stages, vous pouvez les
-      retrouver sur la page stages. Enfin vous pouvez me contacter sur la page contact ou en bas de page.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="skills.html">Compétences</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="internships.html">Stages</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Qui suis-je ?</h2>
+        <p>Je suis Damien JEGOU, un étudiant en 3e année en BUT informatique. Au cours de mon parcours j'ai acquis des
+            compétences en développement, en méthodologie de travail et en gestion de projet, vous pouvez les retrouver
+            sur la
+            page compétences. J'ai aussi participé à des projets divers pour mettre en pratique mes compétences, vous
+            pouvez
+            les retrouver sur la page projets. J'ai aussi eu l'opportunité de participer à des stages, vous pouvez les
+            retrouver sur la page stages. Enfin vous pouvez me contacter sur la page contact ou en bas de page.</p>
 
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-container">
-      <p><strong>Téléphone :</strong> <a href="tel:+337688093129">+33 7 68 80 93 12</a></p>
-      <p><strong>Email :</strong> <a href="mailto:damienjegou132@gmail.com">damienjegou132@gmail.com</a></p>
-      <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/damien-jegou-2b92b2291/" target="_blank">Mon
-          profil Linkedin</a></p>
-      <p><strong>CV :</strong> <a href="Documents/CV_Damien_Jegou.pdf" download>Télécharger mon CV</a></p>
-    </div>
-  </section>
-  <footer>
-    <p>&copy; 2025 Damien JEGOU</p>
-  </footer>
+    <section>
+        <h2>Mes Compétences</h2>
 
-  <script src="JavaScript/script.js"></script>
+        <div class="filter-skills">
+            <button data-category="all">Tous</button>
+            <button data-category="DEV">Langages</button>
+            <button data-category="METHOD">Methodologie</button>
+            <button data-category="TOOL">Outils</button>
+            <button data-category="CONCEPT">Conception</button>
+            <button data-category="OS">Virtualisation</button>
+            <button data-category="FRAME">Framework</button>
+        </div>
+
+        <div class="grid" id="skills-container">
+            <!-- Les projets seront générés ici avec JS -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Mes Projets</h2>
+
+        <div class="filter-btns">
+            <button data-category="all">Tous</button>
+            <button data-category="WEB">Web</button>
+            <button data-category="JAVA">JAVA</button>
+            <button data-category="C++">C++</button>
+            <button data-category="JV">Jeux Vidéos</button>
+            <button data-category="RESEAUX">Réseaux</button>
+            <button data-category="BD">Base de Données</button>
+        </div>
+
+        <div class="grid" id="projects-container">
+            <!-- Les projets seront générés ici avec JS -->
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Mes Stages</h2>
+        <div class="filter-internships">
+            <button data-year="all">Tous</button>
+            <button data-year="2025">2025</button>
+        </div>
+        <div class="grid" id="internships-container">
+            <!-- Les stages seront générés ici avec JS -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Me Contacter</h2>
+        <div class="contact-container">
+            <p>Vous avez un projet ou une opportunité à proposer ? N'hésitez pas à m'envoyer un message !</p>
+
+            <form id="contact-form" action="https://formspree.io/f/mnnevbll" method="POST">
+                <div class=" form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Votre email">
+                </div>
+                <div class="form-group">
+                    <label for="_subject">Sujet</label>
+                    <input type="text" id="_subject" name="_subject" required placeholder="Sujet du message">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+            <div class="social-links">
+                <h3>Retrouvez-moi sur :</h3>
+                <a href="https://www.linkedin.com/in/damien-jegou/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/DamienJegou12" target="_blank">GitHub</a> |
+                <a href="mailto:damienjegou132@gmail.com">damienjegou132@gmail.com</a> |
+                <a href="Documents/CV_Damien_Jegou.pdf" download>Télécharger mon CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <p><strong>Téléphone :</strong> <a href="tel:+337688093129">+33 7 68 80 93 12</a></p>
+            <p><strong>Email :</strong> <a href="mailto:damienjegou132@gmail.com">damienjegou132@gmail.com</a></p>
+            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/damien-jegou-2b92b2291/"
+                    target="_blank">Mon
+                    profil Linkedin</a></p>
+            <p><strong>CV :</strong> <a href="Documents/CV_Damien_Jegou.pdf" download>Télécharger mon CV</a></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Damien JEGOU</p>
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
 </body>
 
 </html>
