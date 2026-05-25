@@ -83,9 +83,24 @@ function displaySkills(list) {
     card.classList.add("skill-card");
     card.setAttribute("data-category", skill.category);
 
+    // Vérifie si la compétence possède un score
+    let scoreHTML = "";
+    if (skill.score) {
+      scoreHTML = `<p class="skill-score"><strong>Score :</strong> ${skill.score}</p>`;
+    }
+
+    // Vérifie si la compétence possède un lien
+    let linkHTML = "";
+    if (skill.link) {
+      // L'attribut target="_blank" permet d'ouvrir le lien dans un nouvel onglet
+      linkHTML = `<a href="${skill.link}" target="_blank" class="skill-link" style="display: block; margin-top: 10px; color: blue; text-decoration: underline;">Voir l'attestation</a>`;
+    }
+
     card.innerHTML = `
       <img src="${skill.img}" alt="${skill.name}">
       <h4>${skill.name}</h4>
+      ${scoreHTML}
+      ${linkHTML}
     `;
     skillsContainer.appendChild(card);
   });

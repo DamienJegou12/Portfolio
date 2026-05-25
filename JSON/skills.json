@@ -65,6 +65,13 @@
     "img": "Documents/sparql.svg"
   },
   {
+    "name": "TOEIC",
+    "category": "CERTIF",
+    "img": "Documents/TOEIC.png",
+    "score": "920/990",
+    "link": "https://www.etsglobal.org/fr/en/digital-score-report/B5D1B92C7CC5DD493BA3E5FF92BC45A71264520BC82DA47B51D16B2BBF7DA28AejFWRmg2UW5DTlVOdndzTTJzZ09wNkVJQzc2cXlQclRvMmMrMDluSFRIcEErTFMy"
+  },
+  {
     "name": "Git",
     "category": "TOOL",
     "img": "Documents/Git_icon.png"
