@@ -74,12 +74,15 @@ h2 {
   transform: translateY(0);
 }
 
+/* --- Mise à jour de la structure de la carte --- */
 .skill-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 60px 1fr; /* L'image prend 60px, le texte prend le reste de la largeur */
   align-items: center;
+  gap: 5px 15px; /* Espacement : 5px en hauteur entre les textes, 15px en largeur avec l'image */
   background: #fff;
   border-radius: 8px;
-  padding: 10px;
+  padding: 15px; /* Légèrement augmenté pour respirer un peu plus */
   margin: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -95,13 +98,35 @@ h2 {
 .skill-card img {
   width: 60px;
   height: 60px;
-  margin-right: 15px;
   border-radius: 6px;
+  grid-row: 1 / -1; /* Indique à l'image de s'étirer sur toute la hauteur des lignes de texte */
+  margin: 0; /* On retire le margin-right car on utilise le 'gap' de la grille maintenant */
 }
 
 .skill-card h4 {
   font-size: 1.2rem;
   font-weight: bold;
+  margin: 0; /* On retire les marges par défaut pour un alignement parfait */
+}
+
+/* --- Nouveaux styles pour aérer les infos du TOEIC --- */
+.skill-score {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.skill-link {
+  font-size: 0.9rem;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.skill-link:hover {
+  text-decoration: underline;
 }
 
 .filter-skills {
